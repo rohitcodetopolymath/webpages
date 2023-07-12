@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DexterityX - No Code Web Development Solution</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+    }
+    /* Header styles */
+    header {
+      background-color: #111111;
+      padding: 20px;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-link {
+      margin-left: 20px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    /* Hero section styles */
+    .hero {
+      height: 100vh;
+      background-image: linear-gradient(to right, #1e1e1e, #111111);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero-text {
+      max-width: 800px;
+    }
+    .hero-title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .hero-description {
+      font-size: 24px;
+      color: #ffffff;
+    }
+    /* Features section styles */
+    .features {
+      padding: 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .feature {
+      width: 300px;
+      background-color: #111111;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .feature:hover {
+      background-color: #7e57c2;
+    }
+    .feature-icon {
+      font-size: 48px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .feature-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .feature-description {
+      font-size: 16px;
+      color: #ffffff;
+    }
+    /* Parallax effect */
+    .parallax {
+      background-image: linear-gradient(to right, #1e1e1e, #111111), url('https://via.placeholder.com/1920x500');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .parallax-text {
+      color: #ffffff;
+      text-align: center;
+    }
+    /* Footer styles */
+    footer {
+      background-color: #111111;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 class="logo">DexterityX</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Features</a></li>
+          <li><a class="nav-link" href="#">Pricing</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2 class="hero-title">Welcome to DexterityX</h2>
+      <p class="hero-description">The No Code Solution for Web Development</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <i class="feature-icon">Icon 1</i>
+      <h3 class="feature-title">Feature 1</h3>
+      <p class="feature-description">Create stunning websites without coding.</p>
+    </div>
+    <div class="feature">
+      <i class="feature-icon">Icon 2</i>
+      <h3 class="feature-title">Feature 2</h3>
+      <p class="feature-description">Drag and drop elements for easy customization.</p>
+    </div>
+    <div class="feature">
+      <i class="feature-icon">Icon 3</i>
+      <h3 class="feature-title">Feature 3</h3>
+      <p class="feature-description">Responsive design for optimal viewing on all devices.</p>
+    </div>
+  </section>
+
+  <section class="parallax">
+    <div class="parallax-text">
+      <h2>Experience the Power of DexterityX</h2>
+      <p>Unlock your web development potential without writing a single line of code.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 DexterityX. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
