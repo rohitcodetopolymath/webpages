@@ -1,0 +1,35 @@
+
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  transition: color 0.5s ease;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #fff;
+}
+
+a {
+  color: #0066cc;
+  transition: color 0.5s ease;
+}
+
+body.dark-mode a {
+  color: #0099ff;
+}
+
+/* Add your own styles and animations here */

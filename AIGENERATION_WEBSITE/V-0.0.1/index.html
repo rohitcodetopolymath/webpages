@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,38 +15,32 @@
       background-color: #0d0d0d;
       color: #ffffff;
     }
-
     /* Header styles */
     header {
       background-color: #111111;
       padding: 20px;
     }
-
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
     .logo {
       font-size: 24px;
       font-weight: bold;
       color: #ffffff;
     }
-
     .nav-links {
       list-style-type: none;
       display: flex;
       margin: 0;
       padding: 0;
     }
-
     .nav-link {
       margin-left: 20px;
       color: #ffffff;
       text-decoration: none;
     }
-
     /* Hero section styles */
     .hero {
       height: 100vh;
@@ -58,23 +51,19 @@
       align-items: center;
       text-align: center;
     }
-
     .hero-text {
       max-width: 800px;
     }
-
     .hero-title {
       font-size: 48px;
       font-weight: bold;
       margin-bottom: 20px;
       color: #ffffff;
     }
-
     .hero-description {
       font-size: 24px;
       color: #ffffff;
     }
-
     /* Features section styles */
     .features {
       padding: 40px 0;
@@ -83,7 +72,6 @@
       justify-content: center;
       gap: 20px;
     }
-
     .feature {
       width: 300px;
       background-color: #111111;
@@ -92,29 +80,24 @@
       text-align: center;
       transition: background-color 0.3s ease;
     }
-
     .feature:hover {
       background-color: #7e57c2;
     }
-
     .feature-icon {
       font-size: 48px;
       color: #ffffff;
       margin-bottom: 20px;
     }
-
     .feature-title {
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
       color: #ffffff;
     }
-
     .feature-description {
       font-size: 16px;
       color: #ffffff;
     }
-
     /* Parallax effect */
     .parallax {
       background-image: linear-gradient(to right, #1e1e1e, #111111), url('https://via.placeholder.com/1920x500');
@@ -127,12 +110,10 @@
       justify-content: center;
       align-items: center;
     }
-
     .parallax-text {
       color: #ffffff;
       text-align: center;
     }
-
     /* Footer styles */
     footer {
       background-color: #111111;
@@ -140,8 +121,8 @@
       text-align: center;
     }
   </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
   <header>
     <div class="header-content">
@@ -166,19 +147,63 @@
 
   <section class="features">
     <div class="feature">
+
       <h4 class="feature-icon"></h4>
       <h3 class="feature-title">FLOWISE</h3>
       <p class="feature-description">flowise lets open up new possibilities</p>
       <h5><a href="http://dexterityx.io/flowise/" class="neon-effect">open possibilities</a></h5>
-    </div>
 
+            <style>
+            .neon-effect {
+              text-decoration: none;
+              color: #c0b518;
+              animation: glowing 2s ease-in-out infinite alternate;
+            }
+            
+            @keyframes glowing {
+              0% {
+                text-shadow: 0 0 5px #44c59c, 0 0 10px #4760b3, 0 0 20px #7a2a72;
+              }
+              50% {
+                text-shadow: 0 0 10px #227773, 0 0 20px #29246f, 0 0 30px #0c0223;
+              }
+              100% {
+                text-shadow: 0 0 5px #cb9595, 0 0 10px #ae2f2f, 0 0 20px #0f0101;
+              }
+            }
+            </style>
+      
+
+  
+    </div>
     <div class="feature">
       <h4 class="feature-icon"></h4>
       <h3 class="feature-title">STREAMLIT</h3>
       <p class="feature-description">dexterity on streamlit</p>
       <h5><a href="http://13.233.164.148:3000/" class="neon-effect">enter the world of dexterity</a></h5>
-    </div>
 
+          <style>
+          .neon-effect {
+            text-decoration: none;
+            color: #c0b518;
+            animation: glowing 2s ease-in-out infinite alternate;
+          }
+          
+          @keyframes glowing {
+            0% {
+              text-shadow: 0 0 5px #44c59c, 0 0 10px #4760b3, 0 0 20px #7a2a72;
+            }
+            50% {
+              text-shadow: 0 0 10px #227773, 0 0 20px #29246f, 0 0 30px #0c0223;
+            }
+            100% {
+              text-shadow: 0 0 5px #cb9595, 0 0 10px #ae2f2f, 0 0 20px #0f0101;
+            }
+          }
+          </style>
+
+
+    </div>
     <div class="feature">
       <i class="feature-icon">Icon 3</i>
       <h3 class="feature-title">Feature 3</h3>
@@ -196,74 +221,7 @@
   <footer>
     <p>&copy; 2023 DexterityX. All rights reserved.</p>
   </footer>
-
-  <!-- Versioning functionality -->
-  <script>
-    // Retrieve the list of version folders
-    fetch('AIGENERATION_WEBSITE/')
-      .then(response => response.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const html = parser.parseFromString(data, 'text/html');
-
-        // Access the anchor elements inside the folder
-        const links = html.querySelectorAll('a');
-
-        // Iterate over the links and create a feature for each version
-        links.forEach(link => {
-          const version = link.href;
-          const feature = createVersionFeature(version);
-          document.querySelector('.features').appendChild(feature);
-        });
-      });
-
-    // Create a feature element for a specific version
-    function createVersionFeature(version) {
-      const feature = document.createElement('div');
-      feature.className = 'feature';
-
-      const title = document.createElement('h3');
-      title.className = 'feature-title';
-      title.textContent = version;
-
-      const description = document.createElement('p');
-      description.className = 'feature-description';
-      description.textContent = 'Responsive design for optimal viewing on all devices.';
-
-      const link = document.createElement('a');
-      link.href = version;
-      link.className = 'neon-effect';
-      link.textContent = 'Enter Version';
-
-      feature.appendChild(title);
-      feature.appendChild(description);
-      feature.appendChild(link);
-
-      return feature;
-    }
-  </script>
-
-  <style>
-    .neon-effect {
-      text-decoration: none;
-      color: #c0b518;
-      animation: glowing 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glowing {
-      0% {
-        text-shadow: 0 0 5px #44c59c, 0 0 10px #4760b3, 0 0 20px #7a2a72;
-      }
-
-      50% {
-        text-shadow: 0 0 10px #227773, 0 0 20px #29246f, 0 0 30px #0c0223;
-      }
-
-      100% {
-        text-shadow: 0 0 5px #cb9595, 0 0 10px #ae2f2f, 0 0 20px #0f0101;
-      }
-    }
-  </style>
+  <script src="./scripts.js"></script>
 </body>
-
 </html>
+
